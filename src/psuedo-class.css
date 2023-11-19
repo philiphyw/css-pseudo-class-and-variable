@@ -1,0 +1,37 @@
+
+/* span has any one of the target classes */
+span:is(.highlight, .highlight-me-too){
+    background-color: blueviolet;
+    color: white;
+}
+
+/*  orange tag as direct children in header and section */
+:is(header, section) orange{
+    background-color: orange;
+}
+
+
+/*  orange tag as direct or indirect children in header and body */
+:where(header, body) div{
+   text-transform: uppercase;
+}
+
+/* li has sibling after it */
+li:has(+ li) {
+    border-bottom: 1px solid #333;
+}
+
+/* li direct children orange tag */
+li:has(> span){
+    background-color: orange 
+}
+
+/* li doesn't contain strong tag */
+li:not(:has(strong)){
+    color: green;
+}
+
+/* form has validation failed -like pseudo classes */
+form:has(:invalid, :out-of-range, :placeholder-shown, :indeterminate){
+    border: 2px solid red;
+}
