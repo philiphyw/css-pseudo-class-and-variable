@@ -1,0 +1,19 @@
+:root{
+    --bg-color:white;
+    --font-color:#333;
+
+    --margin-1:20px;
+    --margin-2:15px;
+    --margin-3:10px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
